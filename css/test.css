@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0 5px;
+  padding: 0;
+}
+* body {
+  font-family: sans-serif;
+  background-image: url(/img/bg.png);
+}
+
+.container {
+  height: 100vh;
+}
+
+.header {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__logo {
+  font-size: 3vw;
+}
+.header .header__menu {
+  display: flex;
+  flex-direction: row;
+  font-size: 2vw;
+  gap: 15px;
+}
+
+.main {
+  height: 80%;
+  display: flex;
+}
+.main .main__image {
+  background-image: url(/img/profile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 50%;
+}
+.main .main__text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .main__text_1 {
+  font-size: 10vw;
+}
+.main .main__text_2, .main .main__text_3, .main .main__text_4 {
+  font-size: 2vw;
+}
+
+.footer {
+  border: 2px solid red;
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+}/*# sourceMappingURL=test.css.map */

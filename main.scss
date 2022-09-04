@@ -1,0 +1,108 @@
+@import "reset";
+@mixin fontStyle{
+    font-size: 3vw;
+    font-family: Hobo std;
+    color: #ff0000;
+}
+.container {
+  width: 80vw;
+  height: 100vh;
+  margin: 10% auto;
+  background-color: #e0a2ca;
+}
+
+.header {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  #{&}__logo {
+    @include fontStyle();
+  }
+  #{&}__menu {
+    display: flex;
+    gap: 25px;
+  }
+}
+.main {
+  display: flex;
+  height: 80%;
+
+  #{&}__image {
+    background-image: url(/img/profile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 70px 150px;
+    width: 30vw;
+    height: 400px;
+    margin: 50px;
+  }
+  #{&}__text {
+    display: flex;
+    width: 45vw;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_1,
+    &_2,
+    &_3,
+    &_4 {
+      margin: 10px;
+      font-size: 2vw;
+    }
+    &_name {
+        @include fontStyle();
+    }
+  }
+}
+.footer {
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 10px;
+
+  [class^="footer_"] img {
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 765px) {
+  .header {
+    justify-content: center;
+    #{&}__menu {
+      display: none;
+    }
+  }
+  .main {
+    height: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #{&}__image {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin: 25px;
+    }
+    #{&}__text {
+      &_1,
+      &_2,
+      &_3,
+      &_4 {
+        margin: 5px;
+      }
+    }
+  }
+  .footer {
+    justify-content: center;
+
+    [class^="footer_"] img {
+      height: 50%;
+      border-radius: 50%;
+    }
+  }
+}
